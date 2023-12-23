@@ -1,0 +1,30 @@
+body{
+    margin: 0;
+    overflow: hidden;
+}
+.Desk, .lock{
+    margin: 0;
+    padding: 0%;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+.Desk{
+    background-image: url("background/1276648.png");
+    background-size: cover;
+}
+.lock{
+    background-image: url("background/img104.jpg");
+    background-size: cover;
+    top: 00px;
+    transition: 5s;
+}
+.dislock{
+    top: -10000px;
+    transition: 5s;
+}
+.lockScreenDev{
+    top: 0px;
+    transition: 5s;
+}

@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="CSS/Windows/BackSet.css">
+    <link rel="stylesheet" href="CSS/Notify.css">
+    <link rel="stylesheet" href="CSS/Menu.css">
+    <link rel="stylesheet" href="CSS/AccèsBar.css">
+    <link rel="stylesheet" href="CSS/StartM.css">
+    <link rel="stylesheet" href="CSS/taskbar.css">
+    <link rel="stylesheet" href="CSS/Desk.css">
+    <link rel="stylesheet" href="CSS/Lock.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/GUI.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Windows 12</title>
+    <link rel="shortcut icon" href="img/win11.png" type="image/x-icon">
+</head>
+<body>
+    <div class="Desk"id="Desk">
+        <!--Back flou Menu-->
+<div class="backFM-garident INBackFM" id="backFM" onclick="MenuNone(); NotifyNone(); closeM(); closeFlou()" ondblclick="OpeningFlou()">
+    <div class="hPos">
+        <div class="h">
+            <b>09:24</b>
+        </div>
+    </div>
+    <div class="dPos">
+        <div class="d">
+            Lundi 1 Janvier
+        </div>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="propos" align="center">
+    <font color="#ffffff">
+    Ce système est géré par <font color="#aaaaff" style="cursor: pointer;" title="Le système n'étant qu'une émulation et n'étant encore que en développement, des fonctionnalitées ne sont pas opérationnelle.">ModuloDeveloppementInstance</font>.<br>
+    Certaines fonctionnalitées ne fonctionneront pas correctement.</font></div>
+    
+</div>
+<script>
+    function OpeningFlou(){
+        var backFM = document.getElementById("backFM")
+backFM.classList.add("ABackFM")
+backFM.classList.remove("INBackFM")
+    }
+    function closeFlou(){
+        var backFM = document.getElementById("backFM")
+backFM.classList.remove("ABackFM")
+backFM.classList.add("INBackFM")
+    }
+
+</script>
+        <div class="logoPop">
+            <a target="_blank" onclick="WinRedirect()" href="https://www.microsoft.com/fr-fr/software-download/windows11">
+                <img src="img/win11.png" alt="" onclick="WinRedirect()"  style="position: absolute; width: 20px; margin: 20px;" title="Télécharger windows 11">
+            </a>
+            <audio src="musique/Windows Notify Calendar.mp3" id="WinRedirect"></audio>
+            <script>
+                function WinRedirect(){
+                    const WinRedirect = document.getElementById("WinRedirect")
+                    WinRedirect.play
+                }
+            </script>
+        </div>
+        <!--Bar de tache-->
+        <div class="taskbarPos">
+            
+            <!--Bouton menu démarrer-->
+            <div class="taskbar">
+                <div class="btnDemarrer">
+                <img src="img/win11.png" alt="" title="Windows" class="StartMenuBtn" id="btn1" onclick="openM(); MenuNone(); NotifyNone()">
+                <img src="img/win11.png" alt="" title="Windows" class="StartMenuBtn" id="btn2" onclick="closeM()">
+                </div>
+                <!--application taskbar-->
+                <div class="appsTask">
+                    
+                </div>
+            </div>
+            
+    </div>
+    
+    <!--Menu démarrer-->
+    <div class="StartMPos" id="StartMPos">
+        <div class="StartM">
+            <div class="optionMachine" id="optionMachine">
+                <div class="buttonSys">
+                    <img src="GUIicon/exitDark.svg" alt="" onclick="lockscreen()" class="iconSysGM">
+                </div>
+                
+            </div>
+        </div>
+</div>
+<!--Bar d'accèe rapide-->
+<div class="AccesBar">
+      <div class="APM">
+        <img src="img/video-pause-button-Light.png" alt="" id="PlMB" class="PlaySysButton buttonSys" onclick="PlayM()">
+        <img src="img/play-button-Light.png" alt="" id="PaMB" class="PlaySysButton buttonSys" onclick="PauseM()">
+      </div>
+      <div class="wifi buttonSys PlaySysButton iconSysGM" onclick="Menu(); Notify(); closeM()">
+        <img src="GUIicon/wifiLight.svg" alt="" class="buttonSys PlaySysButton iconSysGM">
+        <i class="fi fi-rr-wifi buttonSys PlaySysButton iconSysGM"></i>
+      </div> 
+</div>
+
+<!--Menu déroulant-->
+<div class="Menu InactiveMenu" id="Menu">
+    <div class="OpenWinBackSet" onclick="BackSetWinI()">
+        <p> changer le fond écran</p>
+    </div>
+
+</div>
+<div class="NotifyCenter InactiveNotif" id="NotifyVol">
+    <div class="NotifyAction">
+        
+    </div>
+    <div class="Notify">
+        <div class="TextNotNotif">
+        Aucune Notification pour le momment
+    </div>
+    </div>
+</div>
+<!--Pour déclencher l'ouverture du menu de notif-->
+
+<Script>
+    function Notify(){
+        var NotifyVol = document.getElementById("NotifyVol")
+        var backFM = document.getElementById("backFM")
+        NotifyVol.classList.add("ActiveNotif")
+        NotifyVol.classList.remove("InactiveNotif")
+        backFM.classList.add("ABackFM")
+        backFM.classList.remove("INBackFM")
+    }
+    function NotifyNone(){
+        var backFM = document.getElementById("backFM")
+        var NotifyVol = document.getElementById("NotifyVol")
+        NotifyVol.classList.add("InactiveNotif")
+        NotifyVol.classList.remove("ActiveNotif")
+        backFM.classList.add("INBackFM")
+        backFM.classList.remove("ABackFM")
+    }
+</Script>
+<!--Pour déclencher l'ouverture du menu Action-->
+<Script>
+    function Menu(){
+        var Menu = document.getElementById("Menu")
+        Menu.classList.add("ActiveMenu")
+        Menu.classList.remove("InactiveMenu")
+    }
+    function MenuNone(){
+        var Menu = document.getElementById("Menu")
+        Menu.classList.add("InactiveMenu")
+        Menu.classList.remove("ActiveMenu")
+    }
+</Script>
+<div class="musique">
+    <!--Musique-->
+    <Audio id="Ambient">
+        <source src="musique/ambiant/Musique pour Étudier et Travailler Efficacement 🧠 Augmente Intelligence, Concentration, Vitalité.mp3">
+        <source src="musique/ambiant/Windows Utopia así podría ser Windows 12.mp3">
+    </Audio>
+</div>
+<script src="js/musique.js"></script>
+<script>
+    var btn1 = document.getElementById("btn1")
+    var btn2 = document.getElementById("btn2")
+    var MenuD = document.getElementById("StartMPos")
+    function openM(){
+        MenuD.classList.add("StartMPosdev")
+        MenuD.classList.remove("StartMPos")
+        btn1.style.display = "none"
+        btn2.style.display = "flex"
+    }
+    function closeM(){
+        MenuD.classList.add("StartMPos")
+        MenuD.classList.remove("StartMPosdev")
+        btn1.style.display = "flex"
+        btn2.style.display = "none"
+    }
+    /*function lockScreen(){
+       //var écran1 = document.querySelector(.écran1)
+       //var écran2 = document.querySelector(.écran2)
+        const écran1 = document.getElementById("écran1")
+        const écran2 = document.getElementById("écran2")
+        écran2.classList.remove("écran2revel")
+        écran2.classList.add("écran2")
+        écran1.classList.remove("écran1revel")
+        écran1.classList.add("écran1")
+    }*/
+</script>
+<div class="winT1CNMext BackSet" id="BackSetWin">
+    <div class="winT1CNMint">
+        <div class="top" onclick="MoveBackSet()">
+            <div class="text">
+                Changer le fond écran
+            </div>
+            <div class="button">
+                <div class="btnClose backSetBTN" onclick="BackSetWinA()">
+                    <img src="GUIicon/btn-close-Dark.png" alt="" class="btnClose backSetBTN">
+                </div>
+            </div>
+        </div><br><br>
+        <div class="contenueBackSet contenue">
+            <img src="CSS/background/1209999.png" alt="" class="BackSetChange" onclick="set1()">
+            <img src="CSS/background/1276648.png" alt="" class="BackSetChange" onclick="set2()">
+            <img src="CSS/background/1276649.png" alt="" class="BackSetChange" onclick="set3()">
+            <img src="CSS/background/img0_1920x1200.jpg" alt="" class="BackSetChange" onclick="set4()">
+            <img src="CSS/background/img100.jpg" alt="" class="BackSetChange" onclick="set5()">
+            <img src="CSS/background/img101.jpg" alt="" class="BackSetChange" onclick="set6()">
+            <img src="CSS/background/img102.jpg" alt="" class="BackSetChange" onclick="set7()">
+            <img src="CSS/background/img103.jpg" alt="" class="BackSetChange" onclick="set8()">
+            <img src="CSS/background/img104.jpg" alt="" class="BackSetChange" onclick="set9()">
+            <img src="CSS/background/img105.jpg" alt="" class="BackSetChange" onclick="set10()">
+            <img src="CSS/background/img14.jpg" alt="" class="BackSetChange" onclick="set11()">
+            <img src="CSS/background/img19_1920x1200.jpg" alt="" class="BackSetChange"  onclick="set12()">
+            <img src="CSS/background/img20.jpg" alt="" class="BackSetChange" onclick="set13()">
+            <img src="img/Untitled.svg" alt="" class="BackSetChange" onclick="changePersonnal()">
+            <!--script switche de fond-->
+            <link rel="stylesheet" href="CSS/SwitchBack.css">
+            <audio id="Switchcreen" src="musique/Windows-Pop-up-Blocked.mp3"></audio>
+            <script>
+                const Desk = document.getElementById("Desk")
+                function NoBack(){
+                    Desk.style.backgroundColor = '#ffffff'
+                    Desk.classList.remove("back1")
+                    Desk.classList.remove("back3")
+                    Desk.classList.remove("back2")
+                    Desk.classList.remove("back4")
+                    Desk.classList.remove("back5")
+                    Desk.classList.remove("back6")
+                    Desk.classList.remove("back7")
+                    Desk.classList.remove("back8")
+                    Desk.classList.remove("back9")
+                    Desk.classList.remove("back10")
+                    Desk.classList.remove("back11")
+                    Desk.classList.remove("back12")
+                    Desk.classList.remove("back13")
+                }
+                const Switchcreen = document.getElementById("Switchcreen")
+                function changePersonnal(){
+                    var changePer = prompt("Entrer l'URL de l'image")
+                    NoBack()
+                    //var changePer = url('"' + changePer + '"')
+                    //Desk.style.backgroundImage = changePer
+                    Desk.style.backgroundImage = 'url(' + '"' + changePer + '"' + ')'
+                    Switchcreen.play()
+                }
+                
+                function set1(){
+                    NoBack()
+                    Desk.classList.add("back1")
+                    Switchcreen.play()
+                }
+                function set2(){
+                    NoBack()
+                    Switchcreen.play()
+                    Desk.classList.add("back2")
+                }
+                function set3(){
+                    NoBack()
+                    Switchcreen.play()
+                    Desk.classList.add("back3")
+                }
+                function set4(){
+                    NoBack()
+                    Switchcreen.play()
+                    Desk.classList.add("back4")
+                }
+                function set5(){
+                    NoBack()
+                    Switchcreen.play()
+                    Desk.classList.add("back5")
+                }
+                function set6(){
+                    NoBack()
+                    Switchcreen.play()
+                    Desk.classList.add("back6")
+                }
+                function set7(){
+                    NoBack()
+                    Switchcreen.play()
+                    Desk.classList.add("back7")
+                }
+                function set8(){
+                    NoBack()
+                    Switchcreen.play()
+                    Desk.classList.add("back8")
+                }
+                function set9(){
+                    NoBack()
+                    Switchcreen.play()
+                    Desk.classList.add("back9")
+                }
+                function set10(){
+                    NoBack()
+                    Switchcreen.play()
+                    Desk.classList.add("back10")
+                }
+                function set11(){
+                    NoBack()
+                    Switchcreen.play()
+                    Desk.classList.add("back11")
+                }
+                function set12(){
+                    NoBack()
+                    Switchcreen.play()
+                    Desk.classList.add("back12")
+                }
+                function set13(){
+                    NoBack()
+                    Switchcreen.play()
+                    Desk.classList.add("back13")
+                }
+            </script>
+        </div>
+    </div>
+</div>
+
+<script>
+    const BackSetWin = document.getElementById("BackSetWin")
+    BackSetWin.style.display = "none"
+        function BackSetWinA(){
+            const BackSetWin = document.getElementById("BackSetWin")
+            BackSetWin.style.display = "none"
+        }
+        function BackSetWinI(){
+            const BackSetWin = document.getElementById("BackSetWin")
+            BackSetWin.style.display = "flex"
+        }
+</script>
+<script src="js/BackSet.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--écran de vérouillage-->
+    <div class="lock" id="lock">
+        <!--écran 1
+        contient:
+    -l'heure en gros plans
+    -la date-->
+        <div class="écran1" id="écran1" onclick="DislockScreen()" oncontextmenu="DislockScreen()">
+            <div class="hPos">
+                <div class="h">
+                    <b>09:24</b>
+                </div>
+            </div>
+            <div class="dPos">
+                <div class="d">
+                    Lundi 1 Janvier
+                </div>
+            </div>
+        </div>
+        <!--contient:
+        -le boutton de connexion-->
+        <div class="écran2" id="écran2">
+            <div class="ProfilPos Pro">
+                <div class="profil">
+                    <img src="img/UserIcon.png" alt="" class="profilIcon">
+                </div>
+            </div>
+            <div class="NameUser">Utilisateur</div>
+            <div class="ButtonCo"><button class="BouttonCo" id="BouttonCo" onclick="Dislock()"><!--ceci déclenche le déverouillage-->
+                Se connecter
+            </button>
+        </div>
+        </div>
+    </div>
+</body>
+<audio src="musique/Windows 11 Startup sound.mp3" id="startupsound"></audio>
+<script>
+    var lockScreen = document.getElementById("lock")
+    var écran1 = "1"
+    var écran2 = "0"
+    var startupSound = document.getElementById("startupsound")
+    function DislockScreen(){
+       //var écran1 = document.querySelector(.écran1)
+       //var écran2 = document.querySelector(.écran2)
+        const écran1 = document.getElementById("écran1")
+        const écran2 = document.getElementById("écran2")
+        écran2.classList.add("écran2revel")
+        écran2.classList.remove("écran2")
+        écran1.classList.add("écran1revel")
+        écran1.classList.remove("écran1")
+    }
+
+    function Dislock(){
+        lockScreen.classList.add("dislock")
+        lockScreen.classList.remove("lockScreenDev")
+        startupSound.play()
+    }
+    function lockScreen(){
+        lockScreen.classList.add("PleaseLock")
+        lockScreen.classList.remove("dislock")
+        startupSound.play()
+    }
+    /*function lockScreen(){
+       //var écran1 = document.querySelector(.écran1)
+       //var écran2 = document.querySelector(.écran2)
+        const écran1 = document.getElementById("écran1")
+        const écran2 = document.getElementById("écran2")
+        écran2.classList.add("écran2revel")
+        écran2.classList.remove("écran2")
+        écran1.classList.add("écran1revel")
+        écran1.classList.remove("écran1")
+    }*/
+   </script>
+</html>

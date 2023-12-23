@@ -1,0 +1,44 @@
+.NotifyCenter{
+    display: grid;
+    position: absolute;
+    width: 500px;
+    height: 650px;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 20px;
+    backdrop-filter: blur(0px);
+
+}
+.NotifyAction{
+    width: 500px;
+    height: 150px;
+    background-color: rgba(240, 248, 255, 0.623);
+    backdrop-filter: blur(50px);
+    border-radius: 20px;
+}
+.ActiveNotif{
+    top: 1%;
+    left: 1%;
+    transition: 1s;
+}
+.InactiveNotif{
+    top: 1%;
+    left: -100%;
+    transition: 5s;
+}
+.Notify{
+    display: flex;
+    position: absolute;
+    top: 25%;
+    width: 500px;
+    height: 500px;
+    background-color: rgba(240, 248, 255, 0.192);
+    backdrop-filter: blur(50px);
+    border-radius: 20px;
+}
+.TextNotNotif{
+    display: grid;
+    position: absolute;
+    top: 49%;
+    left: 20%;
+    color: rgb(39, 39, 39);
+}

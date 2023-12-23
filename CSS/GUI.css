@@ -1,0 +1,24 @@
+.buttonSys{
+    background-color: rgba(240, 248, 255, 0);
+    border-radius: 10px;
+    transition: 500ms;
+}
+.buttonSys:hover{
+    background-color: rgba(82, 82, 82, 0.685);
+    border-radius: 10px;
+    transition: 500ms;
+}
+.iconSysGM{
+    width: 40px;
+    margin: 5px;
+}
+div.btnClose, img.btnClose{
+    background-color: rgba(0, 0, 0, 0);
+    transition: 500ms;
+    width: 40px;
+}
+img.btnClose:hover{
+    background-color: rgb(255, 0, 0);
+    transition: 500ms;
+    width: 40px;
+}

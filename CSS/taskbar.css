@@ -1,0 +1,61 @@
+.taskbarPos{
+    display: flex;
+    position: absolute;
+    left:25%;
+    top: 90%;
+}
+.taskbar{
+    display: flex;
+    width: 700px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.596);
+    border-radius: 10px;
+    backdrop-filter: blur(50px);
+    overflow: hidden;
+}
+.StartMenuBtn{
+    display: flex;
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    top: 12%;
+    left: 2%;
+}
+.StartMPos{
+    display: flex;
+    position: absolute;
+    top: 1150%;
+    left: 28%;
+    transition: 5s;
+}
+.StartM{
+    display: flex;
+    width: 600px;
+    height: 650px;
+    background-color: rgba(255, 255, 255, 0.452);
+    border-radius: 10px;
+    backdrop-filter: blur(50px);
+}
+.StartMPosdev{
+    display: flex;
+    position: absolute;
+    top: 5%;
+    left: 28%;
+    transition: 1s;
+}
+#btn1{
+    display: flex;
+}
+#btn2{
+    display: none;
+}
+#btn1d{
+    display: none;
+}
+#btn2d{
+    display: flex;
+}
+.appsTask{
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
